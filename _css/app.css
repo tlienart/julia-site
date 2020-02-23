@@ -409,7 +409,7 @@ img.ecosystem-image {
 }
 
 .jumbotron {
-  background-image: url('/assets/infra/splash-img.png');
+  background-image: url('../assets/infra/splash-img.png');
   background-repeat: repeat-x;
   background-size: auto 100%;
 }
