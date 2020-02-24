@@ -11,6 +11,8 @@ The website_* must be defined for the RSS to work
 
 @def prepath = "julia-site"
 
+@def div_content = "container" <!-- instead of franklin-content -->
+
 <!-----------------------------------------------------
 Add here global latex commands to use throughout your
 pages. It can be math commands but does not need to be.
