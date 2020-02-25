@@ -13,6 +13,10 @@ The website_* must be defined for the RSS to work
 
 @def div_content = "container" <!-- instead of franklin-content -->
 
+<!-- by default pages don't have maths or code -->
+@def hasmath = false
+@def hascode = false
+
 <!-----------------------------------------------------
 Add here global latex commands to use throughout your
 pages. It can be math commands but does not need to be.

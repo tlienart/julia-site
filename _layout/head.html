@@ -9,12 +9,20 @@
   {{if hasmath}} {{insert head_katex.html }}      {{end}}
   {{if hascode}} {{insert head_highlight.html }}  {{end}}
   {{isdef title}} <title>{{fill title}}</title>   {{end}}
+
+  {{ispage /blog/*}}
+  <style>
+	  .container ul li p {margin-bottom: 0;}
+  </style>
+  {{end}}
+
 </head>
 
 <body>
 
 {{insert navbar.html}}
 
+<br><br>
 
 
 <!-- Content appended here -->

@@ -10,6 +10,8 @@ This is an attempt at copying [https://julialang.org]() using Franklin.jl.
 * fixed assets like [this one](https://julialang.org/images/2019-julia-user-developer-survey.pdf)
 * lazy subpages (copy-paste html)
 * some internal links may be erroneous (H* links are slightly different now)
+* some  links with `julialang` in them link should be fixed
+* some leftover `{{page.manurl}}` or related
 
 **done**
 * index.html is mostly ok

@@ -1,5 +1,4 @@
 
-\\\\
 
 # Download Julia
 
@@ -313,5 +312,3 @@ The platforms currently supported by Julia are listed below. They are divided in
 * **Tier 3**: Julia may or may not build. If it does, it is unlikely to pass tests. Binaries may be available in some cases. When they are, they should be considered experimental. Ongoing support is dependent on community efforts.
 * **Tier 4**: Julia built at some point in the past, but is known not to build currently.
 @@
-
-\\\\

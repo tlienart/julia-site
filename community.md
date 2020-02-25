@@ -1,4 +1,3 @@
-\\
 
 # Community Standards
 
@@ -223,5 +222,3 @@ The following is a non-comprehensive list of Julia GitHub groups grouped by doma
 * [JuliaGL](https://github.com/JuliaGL) – OpenGL API and ecosystem ([Gitter](https://gitter.im/JuliaGL/meta))
 * [JuliaGraphics](https://github.com/JuliaGraphics) – Drawing, Colors, GUIs
 @@
-
-\\\\

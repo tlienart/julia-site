@@ -1,4 +1,3 @@
-\\\\
 
 # Research
 
@@ -2116,5 +2115,3 @@ arXiv:&nbsp;<a href="https://arxiv.org/abs/1209.5145">1209.5145</a>.
 
   </ul>
 ~~~
-
-\\\\
