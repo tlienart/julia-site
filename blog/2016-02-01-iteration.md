@@ -427,12 +427,8 @@ require multidimensional computation.
 
 It's worth noting one point that has thus far remained unstated: all
 of the examples here are relatively *cache efficient*.  This is a key
-property to observe when writing [efficient
-code](/blog/2013-09-04-fast-numeric).  In
-particular, julia arrays are stored in first-to-last dimension order
-(for matrices, "column-major" order), and hence you should nest
-iterations from last-to-first dimensions.  For example, in the
-filtering example above we were careful to iterate in the order
+property to observe when writing [efficient code](/blog/2013-09-04-fast-numeric/). In particular, julia arrays are stored in first-to-last dimension order (for matrices, "column-major" order), and hence you should nest
+iterations from last-to-first dimensions.  For example, in the filtering example above we were careful to iterate in the order
 
 ```
 for Ipost ...

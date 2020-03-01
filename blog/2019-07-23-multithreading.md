@@ -4,27 +4,23 @@
 @def title = "Announcing composable multi-threaded parallelism in Julia"
 @def authors = "Jeff Bezanson (Julia Computing), Jameson Nash (Julia Computing), Kiran Pamnany (Intel)"  
 @def hascode = true
+@def mintoclevel = 2
 
 # Announcing composable multi-threaded parallelism in Julia
 
 Software performance depends more and more on exploiting multiple processor cores.
 The [free lunch][] from Moore's Law is still over.
-Well, we here in the Julia developer community have something of a reputation for
-caring about performance.
-In pursuit of it, we have already built a lot of functionality for multi-process, distributed
-programming and GPUs, but we've known for years that we would also need a good
-story for composable multi-threading.
+Well, we here in the Julia developer community have something of a reputation for caring about performance.
+In pursuit of it, we have already built a lot of functionality for multi-process, distributed and GPUs, but we've known for years that we would also need a good story for composable multi-threading.
 Today we are happy to announce a major new chapter in that story.
-We are releasing a preview of an entirely new threading interface for Julia programs:
-general task parallelism, inspired by parallel programming systems
+We are releasing a preview of an entirely new threading interface for Julia programs: general task parallelism, inspired by parallel programming systems
 like [Cilk][], [Intel Threading Building Blocks][] (TBB) and [Go][].
 Task parallelism is now available in the v1.3.0-alpha release, an early preview
 of Julia version 1.3.0 likely to be released in a couple months.
 You can find binaries with this feature on the [downloads page][], or build
 the [master branch][] from source.
 
-In this paradigm, any piece of a program can be marked for execution in parallel,
-and a "task" will be started to run that code automatically on an available thread.
+In this paradigm, any piece of a program can be marked for execution in parallel, and a "task" will be started to run that code automatically on an available thread.
 A dynamic scheduler handles all the decisions and details for you.
 Here's an example of parallel code you can now write in Julia:
 
@@ -40,76 +36,52 @@ function fib(n::Int)
 end
 ```
 
-This, of course, is the classic highly-inefficient tree recursive implementation of
-the Fibonacci sequence — but running on any number of processor cores!
-The line `t = @spawn fib(n - 2)` starts a task to compute `fib(n - 2)`, which runs in
-parallel with the following line computing `fib(n - 1)`.
+This, of course, is the classic highly-inefficient tree recursive implementation of the Fibonacci sequence — but running on any number of processor cores!
+The line `t = @spawn fib(n - 2)` starts a task to compute `fib(n - 2)`, which runs in parallel with the following line computing `fib(n - 1)`.
 `fetch(t)` waits for task `t` to complete and gets its return value.
 
 This model of parallelism has many wonderful properties.
-We see it as somewhat analogous to garbage collection: with GC, you
-freely allocate objects without worrying about when and how they are freed.
-With task parallelism, you freely spawn tasks — potentially millions of them — without
-worrying about where they run.
+We see it as somewhat analogous to garbage collection: with GC, you freely allocate objects without worrying about when and how they are freed.
+With task parallelism, you freely spawn tasks — potentially millions of them — without worrying about where they run.
 
 The model is portable and free from low-level details.
-You don't need to explicitly start and stop threads, and you don't even need to know how
-many processors or threads there are (though you can find out if you want).
+You don't need to explicitly start and stop threads, and you don't even need to know how many processors or threads there are (though you can find out if you want).
 
-The model is nestable and composable: you can start parallel tasks that call library
-functions that themselves start parallel tasks, and everything works.
+The model is nestable and composable: you can start parallel tasks that call library functions that themselves start parallel tasks, and everything works.
 Your CPUs will not be over-subscribed with threads.
-This property is crucial for a high-level language where a lot of work is done by library
-functions.
+This property is crucial for a high-level language where a lot of work is done by library functions.
 You need to be free to write whatever code you need — including parallel code —
-without worrying about how the libraries it calls are implemented
-(currently only for Julia code, but in the future we plan to extend this to native libraries
-such as BLAS).
+without worrying about how the libraries it calls are implemented (currently only for Julia code, but in the future we plan to extend this to native libraries such as BLAS).
 
-This is, in fact, the main reason we are excited about this announcement: from this point on,
-the capability of adding multi-core parallelism is unleashed over the entire Julia package ecosystem.
+This is, in fact, the main reason we are excited about this announcement: from this point on, the capability of adding multi-core parallelism is unleashed over the entire Julia package ecosystem.
 
 \toc
 
 ## Some history
 
-One of the most surprising aspects of this new feature is just how long it has been in
-the works.
-From the very beginning — prior even to the 0.1 release — Julia has had the `Task`
-type providing symmetric coroutines, which we've used for event-based I/O.
-So we have always had a unit of *concurrency* (independent streams of execution) in the language, it just
-wasn't *parallel* (simultaneous streams of execution) yet.
-We knew we needed thread-based parallelism though, so in 2014 (roughly the version 0.3 timeframe) we
-set about the long process of making our code thread-safe.
+One of the most surprising aspects of this new feature is just how long it has been in the works.
+From the very beginning — prior even to the 0.1 release — Julia has had the `Task` type providing symmetric coroutines, which we've used for event-based I/O.
+So we have always had a unit of *concurrency* (independent streams of execution) in the language, it just wasn't *parallel* (simultaneous streams of execution) yet.
+We knew we needed thread-based parallelism though, so in 2014 (roughly the version 0.3 timeframe) we set about the long process of making our code thread-safe.
 Yichao Yu put in some particularly impressive work on the garbage collector and thread-local-storage performance.
-One of the authors (Kiran) designed some basic infrastructure for scheduling multiple threads and managing
-atomic datastructures.
+One of the authors (Kiran) designed some basic infrastructure for scheduling multiple threads and managing atomic datastructures.
 
-In version 0.5 about two years later, we released the `@threads for` macro with "experimental" status
-which could handle simple parallel loops running on all cores.
+In version 0.5 about two years later, we released the `@threads for` macro with "experimental" status which could handle simple parallel loops running on all cores.
 Even though that wasn't the final design we wanted, it did two important jobs:
 it let Julia programmers start taking advantage of multiple cores, and provided
 test cases to shake out thread-related bugs in our runtime.
-That initial `@threads` had some huge limitations, however:
-`@threads` loops could not be nested: if the functions they called used `@threads`
-recursively, those inner loops would only occupy the CPU that called them.
-It was also incompatible with our `Task` and I/O system: you couldn't do any I/O or
-switch among `Task`s inside a threaded loop.
+That initial `@threads` had some huge limitations, however: `@threads` loops could not be nested: if the functions they called used `@threads` recursively, those inner loops would only occupy the CPU that called them.
+It was also incompatible with our `Task` and I/O system: you couldn't do any I/O or switch among `Task`s inside a threaded loop.
 
-So the next logical step was to merge the `Task` and threading systems, and "simply"
-(cue laughter) allow `Task`s to run simultaneously on a pool of threads.
+So the next logical step was to merge the `Task` and threading systems, and "simply" (cue laughter) allow `Task`s to run simultaneously on a pool of threads.
 We had many early discussions with Arch Robison (then of Intel) and concluded
 that this was the best model for our language.
 After version 0.5 (around 2016), Kiran started experimenting with a new parallel
 task scheduler [partr][] based on the idea of depth-first scheduling.
-He sold all of us on it with some nice animated slides, and it also didn't hurt that
-he was willing to do some of the work.
-The plan was to first develop partr as a standalone C library so it could be tested
-and benchmarked on its own and then integrate it with the Julia runtime.
+He sold all of us on it with some nice animated slides, and it also didn't hurt that he was willing to do some of the work.
+The plan was to first develop partr as a standalone C library so it could be tested and benchmarked on its own and then integrate it with the Julia runtime.
 
-After Kiran completed the standalone version of partr, a few of us (the authors of
-this post, as well as Keno Fischer and Intel's Anton Malakhov) embarked on a series of
-face-to-face work sessions to figure out how to do the integration.
+After Kiran completed the standalone version of partr, a few of us (the authors of this post, as well as Keno Fischer and Intel's Anton Malakhov) embarked on a series of face-to-face work sessions to figure out how to do the integration.
 The Julia runtime brings many extra features, such as garbage collection and
 event-based I/O, so this was not entirely straightforward.
 Somewhat disappointingly, though not unusually for a complex software project,
@@ -133,8 +105,7 @@ available processor cores, and also provides a graphical interface for changing
 the number of threads, so setting the variable manually is not necessary
 in that environment.
 
-The `Threads` submodule of `Base` houses most of the thread-specific functionality,
-such as querying the number of threads and the ID of the current thread:
+The `Threads` submodule of `Base` houses most of the thread-specific functionality, such as querying the number of threads and the ID of the current thread:
 
 ```julia-repl
 julia> Threads.nthreads()
@@ -227,8 +198,7 @@ as well as [TBB][], for example).
 The code works by modifying its input, so we don't need the task's return value.
 Indicating that a return value is not needed is the only difference with the
 `fetch` call used in the earlier `fib` example.
-Note that we explicitly request `MergeSort` when calling Julia's standard `sort!`,
-to make sure we're comparing apples to apples — `sort!` actually uses
+Note that we explicitly request `MergeSort` when calling Julia's standard `sort!`, to make sure we're comparing apples to apples — `sort!` actually uses
 quicksort by default for sorting numbers, which tends to be faster for random data.
 Let's time the code under `JULIA_NUM_THREADS=2`:
 

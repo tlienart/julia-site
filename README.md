@@ -6,13 +6,10 @@ This is an attempt at copying [https://julialang.org]() using Franklin.jl.
 
 Clone the repository, and assuming you have Franklin do `using Franklin; serve()` then go to `localhost:8000` on your browser and edit away.
 
-## Pass MD
+## Link checks
 
-- JSOC, ok
-- Community, ok
-- Research, ok
-- Learning, ok
-- Blog
+* page `/benchmarks/` is missing
+* 2019 multithreading blog needs checks
 
 ## Notes
 
