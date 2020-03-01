@@ -9,6 +9,8 @@ Clone the repository, and assuming you have Franklin do `using Franklin; serve()
 ## Link checks
 
 * page `/benchmarks/` is missing
+* page `/platform/` is missing
+* page  `projects/` `guidelines/` `archives/`
 * 2019 multithreading blog needs checks
 
 ## Notes

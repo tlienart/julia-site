@@ -7,7 +7,7 @@
 
 # Shelling Out Sucks
 
-[followup post](/blog/2013-04-08-put-this-in-your-pipe.html)
+[followup post](/blog/2013-04-08-put-this-in-your-pipe/)
 
 [Perl]:     http://www.perl.org/
 [Python]:   http://python.org/

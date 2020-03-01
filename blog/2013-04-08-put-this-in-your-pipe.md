@@ -379,9 +379,11 @@ You can read more in Julia's [online manual](http://docs.julialang.org/en/releas
 The whole system is designed on the principle that the easiest thing to do should also be the right thing.
 The end result is that starting and interacting with external processes in Julia is both convenient and safe.
 
+@def manurl = "https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages"
+
 [manurl]:  https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages
-[`pipe`]:  {{page.manurl}}/man2/pipe.2.html
-[`dup2`]:  {{page.manurl}}/man2/dup2.2.html
-[`fork`]:  {{page.manurl}}/man2/fork.2.html
-[`close`]: {{page.manurl}}/man2/close.2.html
-[`exec`]:  {{page.manurl}}/man2/execve.2.html
+[`pipe`]:  https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man2/pipe.2.html
+[`dup2`]:  https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man2/dup2.2.html
+[`fork`]:  https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man2/fork.2.html
+[`close`]: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man2/close.2.html
+[`exec`]:  https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man2/execve.2.html
