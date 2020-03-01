@@ -3,19 +3,13 @@
 
 Please take a moment to read the [Julia Community Standards](https://julialang.org/community/standards/). We expect that your participation in any Julia related forum, online or offline, respects these standards.
 
-\\
-
 ## Diversity and Inclusion
 
 The Julia Community is committed to continuing to foster an inclusive and diverse culture. Read more about how we are doing this on our [diversity page](https://julialang.org/diversity).
 
-\\
-
 ## 2019 Julia User and Developer Survey
 
 We conducted the first annual Julia User & Developer Survey in June 2019, and [presented the results at JuliaCon](https://www.youtube.com/watch?v=yx6lBSHqGfc). Download the [survey findings](https://julialang.org/images/2019-julia-user-developer-survey.pdf).
-
-\\
 
 ## Official Channels
 
@@ -48,8 +42,6 @@ The JuliaCN community has a QQ group: 316628299
 ### YouTube
 
 All the [JuliaCon](http://juliacon.org/) videos and other videos of general interest in the community are uploaded to the [Julia Language YouTube channel](https://www.youtube.com/user/JuliaLanguage).
-
-\\
 
 ## Other channels
 
@@ -142,8 +134,6 @@ Julia has [local user groups around the world](https://julia.meetup.com/), inclu
 * [Julia Rosario](https://www.meetup.com/Julia-Rosario/)
 * [Julia Meetup São Paulo](https://www.meetup.com/Julia-Sao-Paulo/)
 @@
-
-\\
 
 ## Julia GitHub Groups
 
