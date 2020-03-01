@@ -10,7 +10,8 @@ Clone the repository, and assuming you have Franklin do `using Franklin; serve()
 
 - JSOC, ok
 - Community, ok
-- 
+- Research, ok
+- Learning, ok
 
 ## Notes
 
