@@ -12,6 +12,7 @@ Clone the repository, and assuming you have Franklin do `using Franklin; serve()
 - Community, ok
 - Research, ok
 - Learning, ok
+- Blog
 
 ## Notes
 

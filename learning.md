@@ -83,6 +83,8 @@ _Julia 1.0 was released on 8 August 2018_
 * [Julia Observer - A website for browsing Julia packages](https://juliaobserver.com/) by [Dan Segal](http://seg.al/)
 @@
 
+---
+
 ## Julia in the classroom
 
 Julia is ready for the classroom. We encourage instructors to participate in the [Julia community resources](http://julialang.org/community) for questions about Julia or specific packages.
