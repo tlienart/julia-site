@@ -3,17 +3,16 @@
 # Download Julia
 
 If you like Julia, please consider starring us [on GitHub](https://github.com/JuliaLang/julia) and spreading the word! \\
+
 ~~~
 <a class="github-button" href="https://github.com/JuliaLang/julia" data-size="large" data-show-count="true" aria-label="Star JuliaLang/julia on GitHub">Star</a>
 ~~~
-
 
 We provide several ways for you to run Julia:
 
 * In the terminal using the built-in Julia command line using the binaries provided below.
 * Using [Docker](https://docs.docker.com/) images from [Docker Hub](https://hub.docker.com/_/julia) maintained by the [Docker Community](https://github.com/docker-library/julia).
 * [JuliaPro](http://juliacomputing.com/products/juliapro.html) by [Julia Computing](http://juliacomputing.com/) includes Julia and the [Juno IDE](http://junolab.org/), along with access to a curated set of packages for plotting, optimization, machine learning, databases and much more (requires registration).
-
 
 Please see [platform specific instructions](https://julialang.org/downloads/platform) for further installation instructions and if you have trouble installing Julia.
 If the provided download files do not work for you, please [file an issue in the Julia project](https://github.com/JuliaLang/julia/issues).

@@ -2,8 +2,13 @@
 
 This is an attempt at copying [https://julialang.org]() using Franklin.jl.
 
+## How to maintain this
+
+Clone the repository, and assuming you have Franklin do `using Franklin; serve()` then go to `localhost:8000` on your browser and edit away.
+
+## Notes
+
 **todo**
-* all pages apart from landing page
 * nightlies page [this one](https://julialang.org/downloads/nightlies)
 * old release page [this one](https://julialang.org/downloads/oldreleases)
 * diversity page [this one](https://julialang.org/diversity)
@@ -12,10 +17,8 @@ This is an attempt at copying [https://julialang.org]() using Franklin.jl.
 * some internal links may be erroneous (H* links are slightly different now)
 * some  links with `julialang` in them link should be fixed
 * some leftover `{{page.manurl}}` or related
-
-**done**
-* index.html is mostly ok
-* downloads mostly ok
+* [x] styling on blog page to have dates on other line
+* [x] add link to Franklin in footer
 
 **notes**
 

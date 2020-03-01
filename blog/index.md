@@ -16,9 +16,6 @@ Blogs from the broader Julia community can be found at [Julia Bloggers](http://w
   grid-gap: 1rem;
 }
 
-.grid > div {
-}
-
 .grid > h2, .grid > p {
   background: #f2f2f2;
   padding: 0.5rem 0.5rem 1rem 0.5rem;
@@ -27,6 +24,12 @@ Blogs from the broader Julia community can be found at [Julia Bloggers](http://w
   border-radius: 5px;
   text-align:left;
 }
+
+.grid > p a {
+  display: block;
+  padding-bottom: 0.5em;
+}
+
 </style>
 <div class="grid">
 ~~~
@@ -205,7 +208,7 @@ Blogs from the broader Julia community can be found at [Julia Bloggers](http://w
 
 [Julia Summer of Code 2015](/blog/2015-05-23-jsoc-cfp/) 2015-05-23
 
-2014
+**2014**
 
 [Julia 0.3 Release Announcement](/blog/2014-08-20-julia-0.3-release/) 2014-08-20
 
@@ -231,7 +234,7 @@ Blogs from the broader Julia community can be found at [Julia Bloggers](http://w
 
 [Efficient Aggregates in Julia](/blog/2013-03-05-efficient-aggregates/) 2013-03-05
 
-2012
+**2012**
 
 [Design and implementation of Julia](/blog/2012-08-16-design-and-implementation-of-julia/) 2012-08-16
 
