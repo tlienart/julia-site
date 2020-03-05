@@ -223,8 +223,7 @@ implementations.](/assets/images/blog/2017-03-14-cudanative/performance.png)
 
 [^2]: The measurements include memory transfer time, which is why a CPU implementation was not included (realistically, data would be kept on the GPU as long as possible, making it an unfair comparison).
 
-We also aim to be compatible with tools from the CUDA toolkit. For example, you can [profile
-Julia kernels](/assets/images/blog/2017-03-14-cudanative/nvvp.png) using the NVIDIA Visual
+We also aim to be compatible with tools from the CUDA toolkit. For example, you can [profile Julia kernels](/assets/blog/nvvp.png) using the NVIDIA Visual
 Profiler, or use `cuda-memcheck` to detect out-of-bound accesses[^3]:
 
 ```

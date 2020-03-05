@@ -29,11 +29,11 @@ The Julia organization is a participant in Google Summer of Code.
 The Julia organization generally fields a large number of students (&gt;20) mentored by open source developers and university professors at leading institutions from all around the world.
 Students who are accepted into this prestigious program are paid a summer stipend to contribute to the open source tooling around Julia and its package ecosystem.
 
-If this sounds like something you would be interested in, head over to the [Projects page](projects/) to see a list of all the available projects.
+If this sounds like something you would be interested in, head over to the [Projects page](/jsoc/projects/) to see a list of all the available projects.
 
-Check out the [application guidelines](guidelines/) once you have a project in mind.
+Check out the [application guidelines](/jsoc/guidelines/) once you have a project in mind.
 
-You can see previous Summer of Code projects at the [Archive page](archive/).
+You can see previous Summer of Code projects at the [Archive page](/jsoc/archive/).
 
 Are you interested in Julia but not super familiar with the language?
 Head over to [JuliaAcademy](https://juliaacademy.com) to take some free online Julia classes.

@@ -4,45 +4,53 @@ This is an attempt at copying [https://julialang.org]() using Franklin.jl.
 
 ## How to maintain this
 
-Clone the repository, `cd` to it, and, in Julia, assuming you have Franklin do `using Franklin; serve()` then go to `localhost:8000` on your browser and edit away.
+Clone the repository, `cd` to it, and, in Julia, assuming you have Franklin do
+`using Franklin; serve()` then go to `localhost:8000` on your browser and edit
+away.
 
 ## Link checks
 
 * [x] page `/benchmarks/` is missing
 * subpagees of downloads:
-  * [ ] https://julialang.org/downloads/platform/
-  * [ ] https://julialang.org/downloads/oldreleases/
-  * [ ] https://julialang.org/downloads/nightlies/
+  * [x] https://julialang.org/downloads/platform/
+  * [x] https://julialang.org/downloads/oldreleases/
+  * [x] https://julialang.org/downloads/nightlies/
 * other subpages
-  * [ ] https://julialang.org/learning/getting-started/
-  * [ ] https://julialang.org/jsoc/archive/
-  * [ ] https://julialang.org/jsoc/guidelines/
-  * [ ] https://julialang.org/jsoc/projects/
-* page  `projects/` `guidelines/` `archives/`
+  * [x] https://julialang.org/learning/getting-started/
+  * [x] https://julialang.org/jsoc/archive/
+  * [x] https://julialang.org/jsoc/guidelines/
+  * [x] https://julialang.org/jsoc/projects/
+* [x] pages  `projects/` `guidelines/` `archives/`
 * 2019 multithreading blog needs checks
+* [x] fix ico
+
+find and fix https://julialang.org/
 
 
 Looking at github directly
 
 * [x] teaching (part of learning)
 * [x] ideas page, redirect --> jsoc
-* [x] research (note, not using the bibtex-like file)
-* [ ] project (orphan page??)
-* [x] manual --> redirect to docs
+* [x] research (note, not using the bibtex-like files)
+* [x] project (orphan page??)
+* [x] manual --> redirect to docs (note: not added)
 * [x] license --> redirect to julia license (note, not linked to.)
-* [ ] community/standards -- https://julialang.org/community/standards/
-* [ ] community/stewards -- https://julialang.org/community/stewards/
-* [ ] diversity -- https://julialang.org/diversity/
+* [x] community/standards -- https://julialang.org/community/standards/
+* [x] community/stewards -- https://julialang.org/community/stewards/
+* [x] diversity -- https://julialang.org/diversity/
 * [x] download --> redirect to downloads (note, not linked to)
 * [x] ecosystems --> seems superseded by community (not linked to)
 * [x] code examples --> note: not linked to
-* [ ] jscoc/gsod/projects --> https://julialang.org/jsoc/gsod/projects/ (not linked to?)
-* [ ] jsoc/gsoc/* --> https://github.com/JuliaLang/www.julialang.org/tree/master/content/jsoc/gsoc , probably use a grid like for blog posts
+* [x] jscoc/gsod/projects --> https://julialang.org/jsoc/gsod/projects/ (not linked to?)
+* [x] jsoc/gsoc/* --> https://github.com/JuliaLang/www.julialang.org/tree/master/content/jsoc/gsoc , probably use a grid like for blog posts
 
 
 Unclear
 
 * [ ] utf8proc
+
+
+* link issues on blog 2015-10-22 (gist missing)
 
 
 ## Notes

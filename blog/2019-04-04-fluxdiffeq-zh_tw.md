@@ -588,7 +588,7 @@ plot(sol,xscale=:log10,tspan=(0.1,1e11))
 
 ![ROBER Plot](https://user-images.githubusercontent.com/1814174/51388944-eb18e680-1af8-11e9-874f-09478759596e.png)
 
-這不過是個積分法一些微小細節的範例：藉由 PI-適應性控制器和步距預測隱式解算器等，都有著複雜微小的細節並需要長時間的開發與測試，才能變成有效率並穩定的求解器。而不同的問題也會需要不同的方法：如為了在許多[物理問題上得到夠好的解並避免偏移](https://scicomp.stackexchange.com/questions/29149/what-does-symplectic-mean-in-reference-to-numerical-integrators-and-does-scip/29154#29154)，[Symplectic 積分器]((http://docs.juliadiffeq.org/latest/solvers/dynamical_solve.html#Symplectic-Integrators-1))是必須的；另外像是 [IMEX 積分器](ttp://docs.juliadiffeq.org/latest/solvers/split_ode_solve.html#Implicit-Explicit-(IMEX)-ODE-1) 在求解偏微分方程上也是不可或缺的。由此可見建立一個具產品水準的求解器是有迫切需要，但目前相對稀少的。
+這不過是個積分法一些微小細節的範例：藉由 PI-適應性控制器和步距預測隱式解算器等，都有著複雜微小的細節並需要長時間的開發與測試，才能變成有效率並穩定的求解器。而不同的問題也會需要不同的方法：如為了在許多[物理問題上得到夠好的解並避免偏移](https://scicomp.stackexchange.com/questions/29149/what-does-symplectic-mean-in-reference-to-numerical-integrators-and-does-scip/29154#29154)，[Symplectic 積分器]((http://docs.juliadiffeq.org/latest/solvers/dynamical_solve.html#Symplectic-Integrators-1))是必須的；另外像是 [IMEX 積分器](http://docs.juliadiffeq.org/latest/solvers/split_ode_solve.html#Implicit-Explicit-(IMEX)-ODE-1) 在求解偏微分方程上也是不可或缺的。由此可見建立一個具產品水準的求解器是有迫切需要，但目前相對稀少的。
 
 在科學運算這個領域，常常會為了機器學習類型的方法設計獨立的函式庫，但在 Julia 中裡兩者並無不同，也就是說你可以直接利用這些現成的函式庫。
 
