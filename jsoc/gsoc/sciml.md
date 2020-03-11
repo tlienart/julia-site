@@ -72,7 +72,7 @@ to accelerate optimization.
 
 Advanced techniques [utilize radial basis functions](https://www.cambridge.org/core/journals/acta-numerica/article/kernel-techniques-from-machine-learning-to-meshless-methods/00686923110F799A1537C4F02BBAAE8E) and Gaussian
 processes in order to interpolate to new parameters to estimate `f` in areas
-which have not been sampled. [Adaptive training techniques](http://www.ressources-actuarielles.net/EXT/ISFA/1226.nsf/9c8e3fd4d8874d60c1257052003eced6/e7dc33e4da12c5a9c12576d8002e442b/$FILE/Jones01.pdf) explore how to pick new areas
+which have not been sampled. [Adaptive training techniques](http%3A%2F%2Fwww.ressources-actuarielles.net%2FEXT%2FISFA%2F1226.nsf%2F9c8e3fd4d8874d60c1257052003eced6%2Fe7dc33e4da12c5a9c12576d8002e442b%2F%24FILE%2FJones01.pdf) explore how to pick new areas
 to evaluate `f` to better hone in on global optima. The purpose of this project
 is to explore these techniques and build a package which performs surrogate
 optimizations.
